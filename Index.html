@@ -1,11 +1,202 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejemplo de Paginas Web  de SV</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-cpu"></i> Mañana Tech 
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Tecnologías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#canvas-demo">Otro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="tech-circle circle-1"></div>
+        <div class="tech-circle circle-2"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="hero-title animate-fade-in">Explora el Futuro de la Tecnología</h1>
+                    <p class="hero-subtitle animate-fade-in-delay">Descubre las últimas innovaciones que están transformando el mundo digital.</p>
+                    <a href="#features" class="btn btn-primary btn-lg mt-3 animate-bounce">Ver más</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-img-container animate-float">
+                        <img src="https://via.placeholder.com/600x400/6c757d/ffffff?text=Tech+Innovation" alt="Tecnología" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="features" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title animate-slide-in">Tecnologías Destacadas</h2>
+                <p class="lead">Las herramientas que están definiendo el futuro digital</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="tech-card card h-100 animate-card">
+                        <div class="card-body text-center">
+                            <div class="tech-icon">
+                                <i class="bi bi-code-square"></i>
+                            </div>
+                            <h3 class="card-title">Desarrollo Web</h3>
+                            <p class="card-text">Frameworks modernos como React, Vue y Angular para construir aplicaciones web de alto rendimiento.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="tech-card card h-100 animate-card">
+                        <div class="card-body text-center">
+                            <div class="tech-icon">
+                                <i class="bi bi-robot"></i>
+                            </div>
+                            <h3 class="card-title">Inteligencia Artificial</h3>
+                            <p class="card-text">Soluciones de machine learning y deep learning para automatización y análisis predictivo.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="tech-card card h-100 animate-card">
+                        <div class="card-body text-center">
+                            <div class="tech-icon">
+                                <i class="bi bi-cloud"></i>
+                            </div>
+                            <h3 class="card-title">Cloud Computing</h3>
+                            <p class="card-text">Infraestructura escalable en la nube con AWS, Azure y Google Cloud Platform.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Canvas Demo Section -->
+    <section id="canvas-demo" class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Demo Interactiva</h2>
+                <p class="lead">Experimenta con nuestro visualizador de datos en tiempo real</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="canvas-container shadow-lg rounded">
+                        <canvas id="techCanvas"></canvas>
+                    </div>
+                    <div class="mt-3 text-center">
+                        <button id="startViz" class="btn btn-primary me-2">Iniciar Visualización</button>
+                        <button id="stopViz" class="btn btn-outline-secondary">Detener</button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="demo-info p-4">
+                        <h3 class="mb-3">Visualización de Datos</h3>
+                        <p>Este demo muestra cómo podemos representar datos complejos en tiempo real usando tecnologías web modernas.</p>
+                        <p>El canvas genera visualizaciones aleatorias simulando el monitoreo de datos en una red tecnológica.</p>
+                        <div class="tech-stack mt-4">
+                            <span class="badge bg-primary me-2">HTML5 Canvas</span>
+                            <span class="badge bg-success me-2">JavaScript</span>
+                            <span class="badge bg-info">Bootstrap 5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Contáctanos</h2>
+                <p class="lead">¿Listo para llevar tu proyecto al siguiente nivel?</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <form id="contactForm" class="p-4 rounded bg-secondary">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-light">Enviar Mensaje</button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-4">
+                        <h3 class="mb-4">Información de Contacto</h3>
+                        <p><i class="bi bi-geo-alt-fill me-2"></i> Av. Tecnología 123, Ciudad Digital</p>
+                        <p><i class="bi bi-telephone-fill me-2"></i> +1 (555) 987-6543</p>
+                        <p><i class="bi bi-envelope-fill me-2"></i> info@techvision.com</p>
+                        
+                        <div class="social-links mt-4">
+                            <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="text-white me-3"><i class="bi bi-github"></i></a>
+                            <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-black text-white text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2023 TechVision. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS Personalizado -->
+    <script src="./js/index.js"></script>
 </body>
 </html>
